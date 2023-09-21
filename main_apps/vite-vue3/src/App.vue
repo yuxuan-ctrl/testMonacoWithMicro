@@ -1,3 +1,13 @@
+<!--
+ * @Author: yuxuanli
+ * @Date: 2023-08-07 09:11:19
+ * @LastEditors: yuxuanli
+ * @LastEditTime: 2023-08-07 09:40:25
+ * @FilePath: \micro-app-demo\main_apps\vite-vue3\src\App.vue
+ * @Description:
+ *
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
+-->
 <template>
   <div id="app-container">
     <micro-app name='appname-sidebar' :url='url' :data='sidebarData'></micro-app>

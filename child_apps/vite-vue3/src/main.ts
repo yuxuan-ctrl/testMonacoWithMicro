@@ -1,7 +1,6 @@
 import { createApp, App as AppInstance } from 'vue'
 import { createRouter, createWebHashHistory, RouterHistory, Router } from 'vue-router'
 import App from './App.vue'
-import routes from './router'
 
 declare global {
   interface Window {
@@ -24,6 +23,8 @@ function handleMicroData (router: Router) {
       console.log('child-vite addDataListener:', data)
 
       if (data.path && typeof data.path === 'string') {
+        console.log('___________________');
+
         data.path = data.path.replace(/^#/, '')
         // 当基座下发path时进行跳转
         if (data.path && data.path !== router.currentRoute.value.path) {
@@ -97,23 +98,14 @@ function handleMicroData (router: Router) {
 
 // ----------分割线---umd模式------两种模式任选其一-------------- //
 let app: AppInstance | null = null
-let router: Router | null = null
-let history: RouterHistory | null = null
 // 将渲染操作放入 mount 函数
 function mount () {
-  history = createWebHashHistory()
-  router = createRouter({
-    history,
-    routes,
-  })
 
   app = createApp(App)
-  app.use(router)
   app.mount('#vite-app')
 
   console.log('微应用child-vite渲染了')
 
-  handleMicroData(router)
 
   // fixBugForVueRouter4(router)
 }
@@ -121,12 +113,9 @@ function mount () {
 // 将卸载操作放入 unmount 函数
 function unmount () {
   app?.unmount()
-  history?.destroy()
   // 卸载所有数据监听函数
   window.eventCenterForAppNameVite?.clearDataListener()
   app = null
-  router = null
-  history = null
   console.log('微应用child-vite卸载了')
 }
 

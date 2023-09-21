@@ -1,29 +1,13 @@
 <template>
   <div>
-    <div id='public-links' @click="onRouteChange">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/page2">Page2</router-link>
-    </div>
-    <router-view></router-view>
+    <Monaco ref="monacoEdit" v-model="text" :readonly="false" type='sql' class="monaco" />
   </div>
 </template>
 
 <script lang="ts" setup>
-// 子应用内部跳转时，通知侧边栏改变菜单状态
-const onRouteChange = () => {
-  if (window.eventCenterForAppNameVite) {
-    // 发送全局数据，通知侧边栏修改菜单展示
-    window.eventCenterForAppNameVite.setGlobalData({ name: 'child-vite' })
-  }
-}
+import { defineComponent, ref } from 'vue'
+import Monaco from "./components/monaco/_base.vue"
+const text = ref<string>('');
 </script>
 
-<style>
-#vite-app {
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-</style>
+<style></style>

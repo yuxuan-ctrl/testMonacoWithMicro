@@ -40,9 +40,9 @@
   integrity sha1-Blsq9iM/50dNRII+PeuJckr0K18=
 
 "@micro-zoe/micro-app@latest":
-  version "0.6.2"
-  resolved "https://registry.npmmirror.com/@micro-zoe/micro-app/download/@micro-zoe/micro-app-0.6.2.tgz#470e2036cf84a9353354995862a7c160d708ab92"
-  integrity sha512-Qx3UzjRIuhAw7bxL9P9iD4KNQIn6tk3Paq66KZ/M+HlV7z1jL99khIqMRdLiQemHA/cFqi2B1n7BaWB2wb2aZQ==
+  version "0.8.11"
+  resolved "https://registry.npmmirror.com/@micro-zoe/micro-app/-/micro-app-0.8.11.tgz#bef4b736a5e84c8579643b50bacb591df11b2819"
+  integrity sha512-4NapVlAomUagOcpHQlcPgTHlVZgeb/OSSuS6lQWV9uOEhsKqbE6j3KBWb3RPN2olfvrbFXGaUKyA0pup92ja9g==
 
 "@types/node@^16.11.10":
   version "16.11.14"
