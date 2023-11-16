@@ -1,8 +1,8 @@
 <!--
  * @Author: yuxuanli
  * @Date: 2023-08-07 09:11:19
- * @LastEditors: yuxuanli
- * @LastEditTime: 2023-11-16 14:48:57
+ * @LastEditors: yuxuan-ctrl
+ * @LastEditTime: 2023-11-16 15:21:34
  * @FilePath: \micro-app-demo\child_apps\vite-vue3\src\App.vue
  * @Description:
  *
@@ -38,6 +38,7 @@ const gotoOtherChild = () => {
   height: 300px;
 }
 .container {
+  width: 1200px;
   min-height: calc(100vh - 60px);
 }
 

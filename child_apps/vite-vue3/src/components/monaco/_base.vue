@@ -217,8 +217,9 @@ defineExpose({
 });
 </script>
 
-<style lang="scss" scoped>
+<style>
 .monaco {
+  text-align: left;
 	width: 100%;
 	border: 1px solid #eee;
 	padding: 10px;
@@ -230,8 +231,6 @@ defineExpose({
 	padding-right: 14px;
 	margin-bottom: 10px;
 }
-</style>
-<style lang="scss">
 .monaco-box {
 	width: 100%;
 	padding: 12px;
@@ -239,3 +238,4 @@ defineExpose({
 	border-radius: 4px;
 }
 </style>
+
