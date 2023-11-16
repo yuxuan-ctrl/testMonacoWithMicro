@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="子应用 -- Vue@3.x"/>
+    <button @click="testpushState">测试pushState</button>
   </div>
 </template>
 
@@ -13,6 +13,11 @@ export default defineComponent({
   name: 'Home',
   components: {
     HelloWorld
+  },
+  methods: {
+    testpushState() {
+      history.replaceState({ data: "test" }, "", "/page2")
+    }
   }
 })
 </script>

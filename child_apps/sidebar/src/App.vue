@@ -119,6 +119,7 @@ export default {
 
     // 判断微前端环境
     if (window.__MICRO_APP_ENVIRONMENT__) {
+      console.log(window.microApp.getData());
       // 获取基座下发的数据
       this.microAppData = window.microApp.getData()
 
@@ -158,6 +159,7 @@ export default {
     },
     // 用户点击菜单时控制基座应用跳转
     select (index, indexPath) {
+      console.log(this.microAppData);
       if (this.microAppData) {
         // 因为 child-vite 和 child-react17 子应用是hash路由，所以需要传递hash值
         let hash = null
@@ -169,7 +171,7 @@ export default {
 
         // 获取子应用appName
         const appName = indexPath[0]
-
+        console.log(index);
         // 控制基座跳转页面，并渲染子应用
         this.microAppData.pushState(appName, index, hash)
       }
