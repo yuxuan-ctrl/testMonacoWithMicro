@@ -1,11 +1,24 @@
+/*
+ * @Author: yuxuan-ctrl
+ * @Date: 2023-08-07 09:11:19
+ * @LastEditors: yuxuan-ctrl
+ * @LastEditTime: 2023-11-17 17:28:20
+ * @FilePath: \micro-app-demo\child_apps\vite-vue3\vite.config.ts
+ * @Description:
+ *
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
+ */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { join } from 'path'
 import { writeFileSync } from 'fs'
-
+// import viteMicroAppMonacoPlugin from "vite-plugin-microapp-monaco"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    // viteMicroAppMonacoPlugin({
+    //   monacoPath:'./node_modules/monaco-editor/esm/vs/base/browser/mouseEvent.js'
+    // }),
     vue(),
     (function () {
       let basePath = ''

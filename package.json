@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "micro-app 案例",
   "main": "index.js",
+  "type":"module",
   "private": true,
   "scripts": {
     "bootstrap": "yarn && npm-run-all --serial install:*",

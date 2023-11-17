@@ -1,8 +1,8 @@
 <!--
  * @Author: yuxuanli
  * @Date: 2023-08-07 09:11:19
- * @LastEditors: yuxuanli
- * @LastEditTime: 2023-09-25 10:14:49
+ * @LastEditors: yuxuan-ctrl
+ * @LastEditTime: 2023-11-17 18:14:03
  * @FilePath: \micro-app-demo\main_apps\vite-vue3\src\views\vite.vue
  * @Description:
  *
@@ -13,6 +13,8 @@
     <micro-app name='appname-vite' :url='url' iframe :data='microAppData' @created='handleCreate'
       @beforemount='handleBeforeMount' @mounted='handleMount' @unmount='handleUnmount' @error='handleError'
       @datachange='handleDataChange'></micro-app>
+      <!-- <iframe src="http://localhost:4007/child/vite/" frameborder="0" width="100%"
+      height="800px"></iframe> -->
   </div>
 </template>
 

@@ -11,7 +11,7 @@
 <template>
   <div class="container">
     <button @click="gotoOtherChild">测试跳转</button>
-    <div class="header">header</div>
+    <div class="header" @mouseover="mouseover">header</div>
     <div class="monaco-container">
       <!-- <Monaco ref="monacoEdit" v-model="text" :readonly="false" type='sql' class="monaco" /> -->
       <Monaco v-model="text" :notCopy="false" :readonly="false" type="sql" class="monaco" :height="200"></Monaco>
@@ -25,6 +25,10 @@ import { defineComponent, ref } from 'vue'
 import Monaco from "./components/monaco/_base.vue"
 const text = ref<string>('');
 
+const mouseover = (e)=>{
+  console.log(e);
+
+}
 const gotoOtherChild = () => {
   console.log(window.microApp);
   if (window.__MICRO_APP_ENVIRONMENT__) {
